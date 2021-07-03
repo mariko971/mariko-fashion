@@ -5,3 +5,9 @@ import CartActionTypes from '../cart/cart.types';
 });
 
 export default ToggleCartHidden;
+
+export const addItem = (item)=>({   
+        type: CartActionTypes.ADD_ITEM,
+        payload: item
+    }
+);
