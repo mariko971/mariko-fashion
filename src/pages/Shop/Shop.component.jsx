@@ -6,15 +6,13 @@ import CollectionsOverview from '../../components/collection-overview/collection
 import CollectionPage from '../collection/collection.component';
 
 
-const ShopPage = ({match})=>{
-    console.log(match)
-     return (
+const ShopPage = ({match})=>(
         <div className='ShopPage'>
            <Route exact path={`${match.path}`} component={CollectionsOverview}/>
            <Route path={`${match.path}/:collectionId`} component={CollectionPage}/>
         </div>
-     ) 
-}
+     ) ;
+
 
 
 
