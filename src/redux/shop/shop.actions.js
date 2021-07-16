@@ -7,7 +7,7 @@ export const updateCollections = (collectionsMap)=>({
     payload: collectionsMap
 });
 
-export const fetchCollectionStart = ()=>({
+export const fetchCollectionsStart = ()=>({
     type: shopActionTypes.FETCH_COLLECTIONS_START
 });
 
@@ -24,7 +24,7 @@ export const fetchCollectionSuccess = (collectionsMap)=>({
 export const selectFetchCollectionsAsync = ()=>{
     return dispatch =>{
         const collectionRef = firestore.collection('collections');
-        dispatch(fetchCollectionStart());
+        // dispatch(fetchCollectionStart());
         collectionRef.get().then(async snapshot=>{
          const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
          dispatch(fetchCollectionSuccess(collectionsMap));         
